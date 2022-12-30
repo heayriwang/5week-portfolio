@@ -177,7 +177,7 @@
         z-index: 999;
         font-size: 48px;
         color: #fff;
-
+        text-shadow: 0 0 2px #000;
     }
 
     .mainVisual .video_wrap i {
@@ -189,6 +189,7 @@
         z-index: 999;
         font-size: 25px;
         color: #fff;
+        text-shadow: 0 0 2px #000;
     }
 
     .mainVisual .video_wrap .xi-angle-down-min {
@@ -199,7 +200,7 @@
         width: 50%;
         z-index: 999;
         font-size: 25px;
-
+        text-shadow: 0 0 2px #000;
         color: #fff;
     }
 
@@ -211,7 +212,7 @@
     /* mainContent */
     .mainContent {
         height: 1000px;
-        background: #ddd;
+        background: #fff;
     }
 
     .mainContent h2 {
@@ -223,7 +224,7 @@
     }
 
     .mainContent p {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 300;
         text-align: center;
         color: #333;
@@ -233,14 +234,26 @@
     .mainContent nav {
         display: flex;
         gap: 30px;
+
+    }
+
+    .mainContent figure {
+        padding: 0 30px;
+
+    }
+
+    .mainContent figure img {
+        border-radius: 50px 0 0 0;
     }
 
     .mainContent figure p {
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 400;
         text-align: center;
         color: #333;
-        margin: 20px 0 60px 0;
+        margin: 10px 0 60px 0;
+        word-break: keep-all;
+        line-height: 25px;
     }
 
     .mainContent .event {
@@ -278,7 +291,7 @@
     /* mainNews */
 
     .mainNews {
-        height: 1000px;
+        height: 900px;
         background: #333;
 
     }
@@ -291,7 +304,7 @@
 
     .mainNews .main_list li {
         margin: 0 0 10px 0;
-
+        border-radius: 50px 0 0 0;
     }
 
     .mainNews .main_list li a {
@@ -334,14 +347,16 @@
     .sec h2 {
         width: 1200px;
         margin: 0 auto 40px auto;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 600;
         color: #fff;
         text-align: center;
+        letter-spacing: 0.3em;
+        text-shadow: 0 0 3px #333;
     }
 
     .main_bg {
-        background: url(./img/black02.png);
+        background: url(./img/back02.jpg);
     }
 
     .main_list {
@@ -368,14 +383,15 @@
         left: 0;
         width: 0;
         height: 0;
-        border-top: 1px solid #8cafdd;
-        border-left: 1px solid #8cafdd;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
         transition: 0.5s;
     }
 
     .main_list>li:hover::before {
         width: 100%;
         height: 100%;
+        border-radius: 50px 0 0 0;
     }
 
     .main_list>li::after {
@@ -385,8 +401,8 @@
         right: 0;
         width: 0;
         height: 0;
-        border-bottom: 1px solid #8cafdd;
-        border-right: 1px solid #8cafdd;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
         transition: 0.5s;
     }
 
@@ -399,24 +415,26 @@
     .mainProduct {
         position: relative;
 
-        height: 1000px;
+        height: 1100px;
+        background: #ddd;
     }
 
     .mainProduct h2 {
         font-size: 40px;
-        font-weight: 600;
+        font-weight: 700;
         color: #333;
         padding: 100px 0 20px 0;
         text-align: center;
     }
 
     .mainProduct p {
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 300;
         color: #333;
         padding: 20px 0;
         text-align: center;
     }
+
 
     .mainProduct .inner {
         padding: 120px 20px;
@@ -425,7 +443,7 @@
 
     .mainProduct .arrows i {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
@@ -439,23 +457,253 @@
 
 
     .mainProduct .arrows i:first-child {
-        margin: 0 0 0 -700px;
+        margin: 0 0 0 -800px;
     }
 
     .mainProduct .arrows i:last-child {
-        margin: 0 0 0 700px;
+        margin: 0 0 0 800px;
     }
 
     .mainProduct .product_slide {
         margin: 0 -15px;
     }
 
+
+
     .mainProduct .product_slide figure {
-        margin: 0 25px;
-        width: 800px;
-        height: 500px;
+        position: relative;
+        flex: 1;
+        margin: 0 30px;
+        width: 600px;
+        height: 600px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+
     }
 
+    .mainProduct .product_slide figure img {
+        border-radius: 50px 0 0 0;
+        padding: 20px 0;
+    }
+
+
+    .mainProduct .product_slide figure .box01 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box01 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure .box02 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box02 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure .box03 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box03 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure .box04 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box04 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure .box05 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box05 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure .box06 {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .mainProduct .product_slide figure:hover .box06 {
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 63%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 50px 0 0 0;
+    }
+
+    .mainProduct .product_slide figure p {
+        font-size: 15px;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 3px #000;
+    }
+
+
+    .mainProduct .slick-dots {
+        position: relative;
+        text-align: center;
+        margin: 0 0 50px 0;
+
+    }
+
+    .mainProduct .slick-dots li {
+        display: inline-block;
+        margin: 0 2px;
+    }
+
+    .mainProduct .slick-dots>li.slick-active {
+        background: #fff;
+
+    }
+
+    .mainProduct .slick-dots li button {
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: #333;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 50%;
+
+    }
 
 
 
@@ -561,6 +809,114 @@
 
 
 
+
+    /* mainEvent */
+
+    .mainEvent .flex_inner {
+        display: flex;
+        gap: 30px;
+        padding: 0 30px;
+
+    }
+
+    .mainEvent .tit h2 {
+        font-size: 40px;
+        font-weight: 700;
+        padding: 50px 0;
+        text-align: center;
+        text-shadow: 0 0 4px #000;
+        letter-spacing: 0.35em;
+    }
+
+
+
+    .mainEvent figure {
+
+        text-align: center;
+        border-radius: 50px 50px 0 0;
+        overflow: hidden;
+    }
+
+    .mainEvent figure .scale_box {
+        margin: 0 0 20px 0;
+        overflow: hidden;
+    }
+
+    .mainEvent figure .scale_box img {
+
+        transition: 0.5s;
+    }
+
+    .mainEvent figure .scale_box:hover img {
+        transform: scale(1.3);
+
+    }
+
+    .mainEvent figure .p_dec {
+        margin: 0 0 20px 0;
+    }
+
+    .sec {
+        padding: 100px 0;
+    }
+
+    .flex_inner>* {
+        flex: 1;
+    }
+
+
+    .btn {
+        display: inline-block;
+        background: transparent;
+        border: 1px solid #444;
+        padding: 7px 20px 7px 20px;
+
+    }
+
+
+
+
+
+
+
+
+
+    /* mainBanner */
+    .mainBanner {
+        padding: 150px 0;
+        text-align: center;
+        background: url(./img/black.jpg) no-repeat fixed center center/cover;
+        color: #fff;
+        border-radius: 30px;
+        margin: 0 50px 50px 50px;
+    }
+
+    .mainBanner h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+        text-shadow: 0 0 3px #000;
+    }
+
+    .mainBanner p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 30px 0;
+        text-shadow: 0 0 3px #000;
+    }
+
+    .mainBanner i {
+        background: #333;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .mainBanner span {
+        vertical-align: 2px;
+        margin: 0 10px 0 0;
+    }
+
+
     /* footer */
     .footer {
         background: #343a40;
@@ -630,6 +986,86 @@
 
     #f_link option {
         padding: 5px 20px;
+    }
+
+
+
+
+
+    /* toTop */
+    body {
+        height: 300vh;
+    }
+
+    #toTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+
+        display: none;
+    }
+
+    #toTop i {
+        background: #fff;
+        color: #333;
+        font-size: 20px;
+        padding: 20px;
+
+    }
+
+
+
+
+
+    /* mainPromotion */
+
+    .mainPromotion {
+        width: auto;
+        height: 500px;
+        background: url(./img/black02.png);
+
+    }
+
+    .mainPromotion .tit {
+        text-align: left;
+
+    }
+
+    .mainPromotion .tit h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 20px 0;
+        color: #fff;
+    }
+
+    .mainPromotion .tit strong {
+        font-size: 15px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 20px;
+
+    }
+
+    .mainPromotion .movie {
+        position: relative;
+        padding: 30px 0;
+    }
+
+
+    .mainPromotion .movie video {
+        width: 100%;
+        border-radius: 30px;
+        margin: 30px;
+    }
+
+    .mainPromotion .promotion_dec {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 60px;
+    }
+
+    .mainPromotion .promotion_play {
+        padding: 30px 0;
     }
 </style>
 
@@ -726,24 +1162,30 @@
     </section>
 
     <section class="mainContent">
-        <h2>SUSTAINABLE
-            MANAGEMENT</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, aut.</p>
+        <h2>
+            새로운 걸작을 만들기 위해 정성과 노력을 다합니다.</h2>
+        <p>공간의 가치와 본질에 답하며, 혁신을 지어낸
+            KCC의 마스터피스를 소개합니다.</p>
         <nav>
             <figure data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="./img/main01.jpg" alt="">
-                <p>품질경영</p>
+                <p>
+
+                    40년 시공 노하우를 바탕으로 고객의 꿈과 행복을 위한
+                    공간을 창조합니다.</p>
             </figure>
             <div class="event">
                 <figure data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <img src="./img/main02.jpg" alt="">
-                    <p>윤리경영</p>
+                    <p>사무, 여가, 쇼핑, 레저 등 다양한 일상의 공간을 지어
+                        문화와 역사를 만듭니다.</p>
 
             </div>
             </figure>
             <figure data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="./img/main03.jpg" alt="">
-                <p>사회공헌</p>
+                <p>다양한 투자 활동으로 자산 운영 관리의 전문성을
+                    확보하여 다양한 분야에서 부가가치를 창출합니다</p>
             </figure>
         </nav>
     </section>
@@ -753,16 +1195,124 @@
 
 
 
+    <!-- mainPromotion -->
+    <section class="mainPromotion ">
+        <div class="flex_inner">
+            <div class="movie">
+                <video src="./img/video07.mp4"></video>
+            </div>
+            <div class="promotion_dec">
+                <div class="tit">
+                    <h2>KCC MASTERPIECE</h2>
+                    <strong class="tit_dec">새로운 걸작을 만들기 위해 정성과 노력을 다합니다.
+                        공간의 가치와 본질에 답하며, 혁신을 지어낸
+                        우미의 마스터피스를 소개합니다.</strong>
+                    <div class="promotion_play">
+                        <button class="btn_o"><i class="xi-play"></i></button>
+                        <button class="btn_o"><i class="xi-pause"></i></button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- mainProduct -->
+
+    <section class="mainProduct">
+        <h2 data-aos="fade-up" data-aos-duration="3000">윤리강령 기본정신</h2>
+        <p data-aos="fade-up" data-aos-duration="1000">우미는 창의와 노력을 바탕으로 고객에 대한 최고의 제품과 서비스를 제공하는
+            선도적인 일류 종합부동산회사를 지향합니다.</p>
+        <div class="inner">
+            <div class="product_slide">
+                <figure>
+                    <img class="itm01" src="./img/serve.jpg" alt="">
+                    <div class="box01">
+                        <p>자세히보기</p>
+                    </div>
+                    <strong class="wor">
+                        신뢰를 바탕으로
+                        고객을 존중합니다
+                    </strong>
+                </figure>
+                <figure>
+                    <img class="itm02" src="./img/serve02.jpg" alt="">
+                    <div class="box02">
+                        <p>자세히보기</p>
+                    </div>
+                    고객과의 약속을 지키며
+                    믿음의 기초가 됩니다
+                </figure>
+                <figure>
+                    <img class="itm03" src="./img/serve03.jpg" alt="">
+                    <div class="box03">
+                        <p> 자세히보기</p>
+                    </div>
+                    최고의 공간과 서비스를
+                    고객에게 제공합니다
+                </figure>
+                <figure>
+                    <img src="./img/serve04.jpg" alt="">
+                    <div class="box04">
+                        <p>자세히보기</p>
+                    </div>
+                    신뢰를 바탕으로
+                    고객을 존중합니다
+                </figure>
+                <figure>
+                    <img src="./img/serve.jpg" alt="">
+                    <div class="box05">
+                        <p>자세히보기</p>
+                    </div>
+                    최고의 공간과 서비스를
+                    고객에게 제공합니다
+                </figure>
+                <figure>
+                    <img src="./img/serve02.jpg" alt="">
+                    <div class="box06">
+                        <p>자세히보기</p>
+                    </div>
+                    고객과의 약속을 지키며
+                    믿음의 기초가 됩니다
+                </figure>
+
+            </div>
+            <div class="arrows">
+                <i class="xi-arrow-left"></i>
+                <i class="xi-arrow-right"></i>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <!-- mainNews -->
-    <section class="mainNews sec main_bg main_bar">
-        <h2>Lorem ipsum dolor sit.</h2>
+    <section class="mainNews sec main_bg ">
+        <h2>NEWS</h2>
         <div class="inner">
             <ul class="main_list">
+                <li data-aos="fade-up">
+                    <a href="">
+                        <strong>
+                            KCC희망재단, 보훈처, 전몰·순직군경 자녀 지원 '히어로즈 패밀리' 협약식
+                        </strong>
+                        <span>22.12.27</span>
+                        <div class="cate"> more
+                            <i class="xi-plus"></i>
+                        </div>
+                    </a>
+                </li>
                 <li data-aos="fade-up" data-aos-duration="4000">
                     <a href="">
                         <strong>
-                            Lorem ipsum dolor sit amet.
+                            KCC희망재단, ‘사랑의열매’에 아동·청소년 위한 기부금 8억 전달
+
                         </strong>
                         <span>22.12.27</span>
                         <div class="cate"> more
@@ -773,18 +1323,7 @@
                 <li data-aos="fade-up" data-aos-duration="3000">
                     <a href="">
                         <strong>
-                            Lorem ipsum dolor sit amet.
-                        </strong>
-                        <span>22.12.27</span>
-                        <div class="cate"> more
-                            <i class="xi-plus"></i>
-                        </div>
-                    </a>
-                </li>
-                <li data-aos="fade-up" data-aos-duration="2000">
-                    <a href="">
-                        <strong>
-                            Lorem ipsum dolor sit amet.
+                            KCC희망재단, 다문화가정 아동을 위한 째깍섬 캠프 진행
                         </strong>
                         <span>22.12.27</span>
                         <div class="cate"> more
@@ -795,7 +1334,7 @@
                 <li data-aos="fade-up" data-aos-duration="1000">
                     <a href="">
                         <strong>
-                            Lorem ipsum dolor sit amet.
+                            KCC건설㈜, 경산시장학회에 장학금 1천만원 기탁
                         </strong>
                         <span>22.12.27</span>
                         <div class="cate"> more
@@ -812,43 +1351,68 @@
 
 
 
-    <!-- mainProduct -->
-    <section class="mainProduct main_bar">
-        <h2 data-aos="fade-up" data-aos-duration="3000">Lorem ipsum dolor sit.</h2>
-        <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quibusdam blanditiis consectetur
-            perferendis?</p>
-        <div class="inner">
-            <div class="product_slide">
-                <figure>
-                    <img src="./img/serve.jpg" alt="">
-                </figure>
-                <figure>
-                    <img src="./img/serve02.jpg" alt="">
-                </figure>
-                <figure>
-                    <img src="./img/serve03.jpg" alt="">
-                </figure>
-                <figure>
-                    <img src="./img/serve04.jpg" alt="">
-                </figure>
 
-            </div>
-            <div class="arrows">
-                <i class="xi-arrow-left"></i>
-                <i class="xi-arrow-right"></i>
-            </div>
+    <!-- mainEvent -->
+    <section class="mainEvent sec">
+        <div class="tit">
+            <h2>BUSINESS ETHICS</h2>
+
         </div>
+
+        <div class="flex_inner">
+            <figure data-aos="fade-up">
+                <div class="scale_box">
+                    <img src="./img/main04.jpg" alt="">
+                </div>
+                <p class="p_dec">광교 KCC 뉴브</p>
+                <a href="#!" class="btn">바로가기</a>
+            </figure>
+            <figure data-aos="fade-up" data-aos-delay="300">
+                <div class="scale_box">
+                    <img src="./img/main05.jpg" alt="">
+                </div>
+                <p class="p_dec">동탄 린 스트라우스 더레이크</p>
+                <a href="#!" class="btn">바로가기</a>
+            </figure>
+            <figure data-aos="fade-up" data-aos-delay="600">
+                <div class="scale_box">
+                    <img src="./img/photo03.jpg" alt="">
+                </div>
+                <p class="p_dec">동홍천 - 양양간 내린천</p>
+                <a href="#!" class="btn">바로가기</a>
+            </figure>
+        </div>
+
     </section>
 
 
 
 
 
+
+
+
+
+    <!-- mainBanner -->
+    <section class="mainBanner">
+        <h2>
+            완벽한 것을 더욱 특별하게 만드는 것.
+        </h2>
+        <p>
+            성공은 바른 마음으로 바른 길을 가는 기업에게만 허락되는 것이기에,
+            동양건설산업은 지식, 정도, 가치경영의 철학을 통해 보다 건강하고 수준높은 기업문화를 창출해가고 있습니다.
+        </p>
+        <span>more</span>
+        <I class="xi-arrow-right"></I>
+    </section>
+
+
+
+
     <!-- mainDesign -->
-    <section class="mainDesign ">
-        <h2 data-aos="fade-up">Lorem ipsum dolor sit.</h2>
-        <p data-aos="fade-up">Lorem ipsum dolor sit amet.</p>
+    <section class="mainDesign main_bar ">
+        <h2 data-aos="fade-up">CUSTOMER SATISFACTION</h2>
+        <p data-aos="fade-up">분양 ∙ 입주 문의</p>
         <div class="top">
             <div class="inner">
                 <div class="itm">
@@ -898,6 +1462,7 @@
 
 
 
+    <!-- footer -->
     <footer class="footer">
         <div class="top">
             <div class="inner">
@@ -939,6 +1504,22 @@
     </footer>
 
 
+
+
+    <!-- toTop -->
+    <div id="toTop">
+        <i class="xi-arrow-top"></i>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <script>
 
         $(function () {
@@ -970,7 +1551,8 @@
         $('.product_slide').slick({
             arrows: false,
             autoplay: true,
-            slidesToShow: 3,
+            slidesToShow: 5,
+            dots: true,
         });
 
         $('.mainProduct .arrows .xi-arrow-left').on('click', function () {
@@ -981,6 +1563,31 @@
             $('.product_slide').slick('slickNext')
         });
 
+        $(window).on('scroll', function () {
+            var scr = $(window).scrollTop();
+            if (scr > 300) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+
+
+        });
+
+        $('#toTop').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 }, 2000)
+        });
+
+
+
+
+        // video
+        $('.mainPromotion .promotion_play button:first-child').on('click', function () {
+            $('.mainPromotion video').trigger('play');
+        });
+        $('.mainPromotion .promotion_play button:last-child').on('click', function () {
+            $('.mainPromotion video').trigger('pause')
+        });
 
 
     </script>

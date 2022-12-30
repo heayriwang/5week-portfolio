@@ -49,3 +49,13 @@ body {
     line-height: 1;
     color: #444;
 }
+
+.flex_inner {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex_inner>* {
+    flex: 1;
+}
